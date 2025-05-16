@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+</head>
+
+<body>
+  <header>
+    <h1>Almdrasa High School</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Contact_Us.html">Contact Us</a></li>
+        <li><a href="schedule.html">Class Schedule</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Contact Us</h2>
+  </main>
+  <div class="contact-info">
+    <form action="submit_contact.php" method="post">
+      <div class="Information">
+        <fieldset>
+          <!-- To group the form elements and give a title to the group -->
+          <legend>Your Information</legend>
+          <label for="text">Name</label>
+          <input type="text" name="name" id="text" placeholder="Enter your name" minlength="5" required />
+          <label for="email">Email</label>
+          <input type="Email" name="email" id="email" placeholder="Enter your Email" required />
+          <label for="reason">Reason for Contact</label>
+          <!--   <input type="text" name="reason" id="reason" placeholder="Enter your reason" /> -->
+          <select name="reason" id="reason" required>
+            <option value="">Select a reason</option>
+            <option value="general">General Inquiry</option>
+            <option value="admission">Admission Information</option>
+            <option value="event">School Event</option>
+            <option value="other">Other</option>
+          </select>
+        </fieldset>
+      </div>
+      <div class="Message">
+        <fieldset>
+          <legend>Message</legend>
+          <label for="subject">Subject</label>
+          <input type="subject" name="subject" id="subject" placeholder="Enter your subject" required />
+          <label for="textarea">Your Message</label>
+          <textarea name="textarea" id="textarea" placeholder="Enter your message" rows="4" cols="50" required
+            minlength="12"></textarea>
+        </fieldset>
+      </div>
+      <div class="Preferences">
+        <fieldset>
+          <legend>Preferences</legend>
+          <h3>Preferences Contact Method: </h3>
+          <input type="radio" name="radio" id="radio" value="email" />
+          <label for="radio">Email</label>
+          <input type="radio" name="radio" id="radio" value="phone" />
+          <label for="radio">Phone</label>
+          <br />
+          <input type="checkbox" name="checkbox" id="checkbox" value="subscribe" required />
+          <label for="checkbox">Subscribe to our newsletter</label>
+        </fieldset>
+      </div>
+      <br />
+      <div class="Button">
+        <button type="submit">Send Information</button>
+        <button type="reset">Reset the Form</button>
+      </div>
+    </form>
+  </div>
+
+  <footer>
+    <p>© 2024 Almdrasa High School - All Rights Reserved</p>
+  </footer>
+</body>
+
+</html>
